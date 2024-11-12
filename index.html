@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Dark Mode Toggle -->
+    <div id="theme-toggle">
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1>My Task Manager</h1>
+    </header>
+
+    <!-- Task Form -->
+    <section>
+        <form id="task-form">
+            <input type="text" id="task-title" placeholder="Task Title" required>
+            <textarea id="task-desc" placeholder="Task Description" required></textarea>
+            
+            <!-- Date and Time input -->
+            <label for="task-deadline">Deadline:</label>
+            <input type="datetime-local" id="task-deadline" required>
+            
+            <select id="task-priority" required>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <button type="submit">Add Task</button>
+        </form>
+    </section>
+
+    <!-- Task List -->
+    <section id="task-list">
+        <!-- Tasks will be dynamically added here -->
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
